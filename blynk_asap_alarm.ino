@@ -11,11 +11,11 @@ const int Pinbuzzer = D2;
 int dataAsap;
 int data = 500;
 
-char auth[] = "qCPK0kIFkf9XrK2FpT78xX-edOgf7alY";
+char auth[] = "";
 
 
-char ssid[] = "Samsung Galaxy A50";
-char pass[] = "danang3776";
+char ssid[] = "";
+char pass[] = "";
 
 SimpleTimer timer;
 
