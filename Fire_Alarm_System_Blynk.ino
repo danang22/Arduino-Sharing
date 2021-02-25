@@ -6,10 +6,10 @@
 
 const int pinBuzzer = D2;
 
-char auth[] = "...."; // Token Blynk
+char auth[] = "WFzD5xJVao7d6DaiLLZ848F9zGjAPmqU"; // Token Blynk
 
-char ssid[] = "......."; // Nama WiFi Yang Terhubung
-char pass[] = "........"; // Password WiFi
+char ssid[] = "A50"; // Nama WiFi Yang Terhubung
+char pass[] = "danang37"; // Password WiFi
 int flag=0;
 void notifyOnFire()
 {
@@ -74,6 +74,7 @@ void loop()
 {
   Blynk.run();
   timer.run();
+
 }
 void getSendData(){
   data = analogRead(mq2);
@@ -82,5 +83,9 @@ void getSendData(){
   if (data > 700)
   {
     Blynk.notify("Asap Terdeteksi");
+    digitalWrite(pinBuzzer, HIGH);
+  }
+  else{
+    digitalWrite(pinBuzzer, LOW);
   }
 }
